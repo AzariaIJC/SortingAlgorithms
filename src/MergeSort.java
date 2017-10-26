@@ -49,7 +49,6 @@ public class MergeSort {
         int numLeft = mid - first + 1;
         int numRight = last - mid;
 
-
         //Generate left and right temp arrays
         int [] left = new int[numLeft];
         System.arraycopy(data,first,left,0, numLeft);
@@ -57,7 +56,6 @@ public class MergeSort {
         //Generate right temporary array
         int [] right = new int[numRight];
         System.arraycopy(data,mid+1,right, 0, numRight);
-
 
         //Set up indices
         int leftIndex =  0;
@@ -73,16 +71,13 @@ public class MergeSort {
                 data[mergeIndex] = left[leftIndex];
                 leftIndex++;
             }
-
             //Right value is smaller than left
             else {
                 data[mergeIndex] = right[rightIndex];
                 rightIndex++;
             }
-
             //Increment index in data array for next merge item
             mergeIndex++;
-
         }
 
         //Clear out left side (if any remaining)
@@ -98,7 +93,6 @@ public class MergeSort {
             rightIndex++;
             mergeIndex++;
         }
-
     }
 
     public static void main(String [] args) {

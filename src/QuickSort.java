@@ -14,6 +14,7 @@ public class QuickSort {
        QuickSort(data,0, data.length-1);
     }
 
+
     /**
      * Recursive function for quick sort
      * @param data - array to sort
@@ -37,7 +38,6 @@ public class QuickSort {
 
         }
     }
-
     /**
      * Returns the median of three pivot for the array
      * @param data - array to sort
@@ -99,7 +99,6 @@ public class QuickSort {
         // regions
         swap(data,first,lastS1);
         return lastS1; //new Pivot
-
     }
 
     /**

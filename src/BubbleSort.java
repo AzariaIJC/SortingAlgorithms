@@ -34,6 +34,23 @@ public class BubbleSort {
         }
     }
 
+    /**
+     * Implementation without the swap checking
+     * @param data
+     */
+    public static void BubbleSort2(int [] data)
+    {
+
+        for(int i = 0; i < data.length-1; i++) {
+           for (int j= data.length -1; j > i; --j) {
+
+                if (data[j] < data[j-1]) {
+                    swap(data, j, j-1); //Swap values
+                }
+            }
+        }
+    }
+
 
     /**
      * Swaps the values within an array between two indices (indexX and indexY

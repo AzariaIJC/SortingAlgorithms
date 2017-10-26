@@ -9,7 +9,6 @@ public class RadixSort {
     public static final int digits = 10;
     public static final int bits = 31;
 
-
     /**
      * Implements radix on an array
      * @param data - array to sort
@@ -25,13 +24,12 @@ public class RadixSort {
         for (d = 1, factor = 1; d <= digits; factor *= radix, d++) {
             //Place in buckets
             for (j = 0; j < data.length; j++)
-                queues[(data[j] / factor) % radix].enqueue(new Integer(data[j]));
+                queues[(data[j] / factor) % radix].enqueue(data[j]);
             //Merge buckets
             for (j = k = 0; j < radix; j++)
                 while (!queues[j].isEmpty())
-                    data[k++] = ((Integer) queues[j].dequeue()).intValue();
+                    data[k++] = queues[j].dequeue();
         }
-
     }
 
 
