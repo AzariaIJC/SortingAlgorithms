@@ -33,7 +33,7 @@ public class QuickSort {
             pivot = partition(data, first, pivot, last);
 
             //Recurse on left and right side
-            QuickSort(data, first, pivot);
+            QuickSort(data, first, pivot-1);
             QuickSort(data, pivot+1, last);
 
         }
